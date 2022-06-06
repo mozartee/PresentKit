@@ -49,7 +49,7 @@ viewController.transitioningDelegate = presentation;
 ### 支持`CocoaPods`:
 
 ```
-pod 'PresentKit'
+pod 'PresentKit' , :git=> 'https://github.com/mozartee/PresentKit'
 ```
 
 
