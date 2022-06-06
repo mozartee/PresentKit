@@ -5,43 +5,20 @@
 ![2022-06-02 18.15.54](assets/2022-06-02%2018.15.54.gif)
 
 ###  使用方法
+
+```
+SecondViewController *viewController = [[SecondViewController alloc] init];
+viewController.appType = indexPath.row;
+Presentation *presentation = [[Presentation alloc] initWithPresentedViewController:viewController presentingViewController:self];
+viewController.transitioningDelegate = presentation;
+[self presentViewController:navController animated:YES completion:NULL];
+```
+
+### 自定义实现样式
+    
 ```
 // 继承 PresentationDelegate，实现可选方法
 
-#pragma mark - PresentationDelegate
-
-- (CGFloat)presentedViewHeight {
-    if (self.appType == fullscreen) {
-        return [UIScreen mainScreen].bounds.size.height;
-    }
-    if (self.appType == def) {
-        return [UIScreen mainScreen].bounds.size.height * 1/2;
-    }
-    return [UIScreen mainScreen].bounds.size.height - 88;
-}
-
-- (BOOL)dimEnable{
-    return self.appType != def;
-}
-
-- (BOOL)slideDismissEnable {
-    return self.appType != def;
-}
-
-- (BOOL)slideToDown {
-    if (self.appType == toutiao) return NO;
-    return YES;
-}
-
-- (BOOL)percentDrivenEnable {
-    if (self.appType == zhihu) return YES;
-    return NO;
-}
-
-```
-
-### 所有可选方法：
-```
 @optional
 
 /// presentedView 高度
@@ -68,3 +45,12 @@
 @property (nonatomic, readonly) BOOL percentDrivenEnable;
 
 ```
+
+### 支持`CocoaPods`:
+
+```
+pod 'PresentKit'
+```
+
+
+
