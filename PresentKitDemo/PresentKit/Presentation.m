@@ -6,7 +6,6 @@
 //
 
 #import "Presentation.h"
-#import "PresentationDelegate.h"
 #import "DimmingView.h"
 
 typedef NS_ENUM(NSUInteger, PanDirection) {

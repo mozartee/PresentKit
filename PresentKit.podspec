@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "PresentKit"
-  spec.version      = "1.0"
+  spec.version      = "0.0.1"
   spec.summary      = "PresentKit is a repo  you can create a custom UIPresentationController"
 
   spec.homepage     = "https://github.com/mozartee/PresentKit"
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "8.0"
 
   spec.source       = { :git => "https://github.com/mozartee/PresentKit.git", :tag => "#{spec.version}" }
-  spec.source_files  = "PresentKitDemo/PresentKitDemo/PresentKit/**/*.{h,m}"
+  spec.source_files  = "PresentKitDemo/PresentKit/**/*.{h,m}"
   spec.framework  = "UIKit"
 
 end
