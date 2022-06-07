@@ -4,11 +4,10 @@
  
 ![2022-06-02 18.15.54](assets/2022-06-02%2018.15.54.gif)
 
-###  使用方法
+### 使用方法
 
 ```
 SecondViewController *viewController = [[SecondViewController alloc] init];
-viewController.appType = indexPath.row;
 Presentation *presentation = [[Presentation alloc] initWithPresentedViewController:viewController presentingViewController:self];
 viewController.transitioningDelegate = presentation;
 [self presentViewController:navController animated:YES completion:NULL];
