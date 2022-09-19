@@ -61,6 +61,10 @@
     return self.appType != def;
 }
 
+- (BOOL)dropDismissEnable {
+    return self.appType != def;
+}
+
 - (BOOL)slideDismissEnable {
     return self.appType != def;
 }

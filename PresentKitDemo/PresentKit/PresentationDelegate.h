@@ -23,11 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL dimEnable;
 /// 是否显示阴影
 @property (nonatomic, readonly) BOOL hasShadow;
-/// 顶部圆角，默认 16.0
+/// 顶部圆角，默认 10.0
 @property (nonatomic, readonly) CGFloat cornerRadius;
 /// 动画时长，默认 0.35
 @property (nonatomic, readonly) NSTimeInterval transitionDuration;
-/// 是否支持手势下滑退出，默认 YES
+/// 是否支持手势下滑退出，默认 YES， 若设为 NO，则 其他手势也不会响应
 @property (nonatomic, readonly) BOOL dropDismissEnable;
 /// 是否支持手势右滑退出，默认 YES
 @property (nonatomic, readonly) BOOL slideDismissEnable;

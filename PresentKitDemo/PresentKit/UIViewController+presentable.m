@@ -14,7 +14,7 @@
 }
 
 - (UIColor *)dimColor {
-    return [UIColor.blackColor colorWithAlphaComponent:0.7];
+    return [UIColor.blackColor colorWithAlphaComponent:0.7f];
 }
 
 - (BOOL)hasDim {
@@ -30,7 +30,7 @@
 }
 
 - (CGFloat)cornerRadius {
-    return 16.0;
+    return 10.0f;
 }
 
 - (NSTimeInterval)transitionDuration {

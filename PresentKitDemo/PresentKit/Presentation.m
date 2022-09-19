@@ -183,6 +183,9 @@ typedef NS_ENUM(NSUInteger, PanDirection) {
 #pragma mark - Gesture
 
 - (void)presentedViewPanned:(UIPanGestureRecognizer *)panGestureRecognizer {
+    // 如果不支持下滑弹出，则所有手势都不响应
+    if (!self.presentable.dropDismissEnable) return;
+    
    CGPoint offset = [panGestureRecognizer translationInView:self.presentedView];
    
    // 获取滑动百分比
